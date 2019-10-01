@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+            width: 15%;
+            margin: auto;
+            border-style: outset;
+        }
+
+        #encabezado {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #encabezado img {
+            width: 5cm;
+
+        }
+        #logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let nombre = window.prompt('¿Introduce Tu Nombre?');
+        let producto = window.prompt('¿Que Producto Deseas Comprar?');
+        let cantidad = parseInt(window.prompt('¿Cuantas Unidades Deseas Comprar?'));
+        let precio = 7.50;
+        let total = precio * cantidad;
+
+        document.write(`
+        <div id="encabezado">
+            <div id="logo">
+                <img src="logo.svg" alt="logo">
+                <h1>Carpinteria Mazarredo</h1>
+            </div>
+            <h2>Bienvenido ${nombre} </h2> 
+        </div>
+        <div class="card">
+            <h3> ${producto}</h3>
+            <img src="${producto}.svg" alt="${producto}">
+            <p> cantidad: ${cantidad}</p>
+            <p> precio: ${precio} € </p>
+            <p> total: ${total} </p>
+        </div>
+
+        `)
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
